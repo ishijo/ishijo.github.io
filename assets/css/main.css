@@ -234,14 +234,36 @@ footer, header, hgroup, menu, nav, section {
 		.image-30-right{
 			width: 30%;
 			float: right;
+			padding: 30px 0 0 30px;
 		}
 		.image-70-left{
 			width: 70%;
 			float: left;
 		}
-		.exp{
+		/* .exp{
 			padding: 30px 0 30px 0;
+		} */
+
+		#expdiv1{
+			align-self: center;
+			padding: 20px 0 0 60px;
 		}
+
+		#expdiv2{
+			position: relative;
+			text-align: center;
+			align-self: center;
+			padding: 0 0 0 0;
+			
+		} 
+
+
+
+		
+
+
+
+
 
 
 
@@ -353,9 +375,10 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #000000;
-		font-family: 'Open Sans', sans-serif;
-		/* font-family: 'Roboto', sans-serif; */
+		/* font-family: 'Radio Canada', sans-serif; */
 		/* font-family: 'Playfair Display', serif; */
+		/* font-family: 'Open Sans', sans-serif; */
+		font-family: 'Roboto', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
 		letter-spacing: 0.01em;
@@ -406,6 +429,8 @@ input, select, textarea {
 	h2 {
 		font-size: 1.5em;
 		letter-spacing: 0.1em;
+		/* font-weight: 1000 */
+		;
 	}
 
 	h3 {
@@ -694,7 +719,11 @@ input, select, textarea {
 		}
 
 			.row.gtr-50 > * {
-				padding: 25px 0 0 25px;
+				padding: 25px 0 0 65px;
+			}
+
+			.row.gtr-50.exp-image {
+				padding: 85px 0 0 25px;
 			}
 
 			.row.gtr-50.gtr-uniform {
@@ -945,15 +974,16 @@ input, select, textarea {
 						padding: 20px 0 0 20px;
 					} */
 					
-					#expdiv1{
-						align-self: center;
-						padding: 20px 0 0 60px;
-					}
+					
 
-					#expdiv2{
-						text-align: center;
-						align-self: center;
-					}
+					/* .exp-image{
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						margin: auto;
+						/* margin: 85px 0 0 0; */
+						/* vertical-align: middle; */
+					} */
 
 					.row.gtr-50.gtr-uniform {
 						margin-top: -20px;
@@ -2008,7 +2038,7 @@ input, select, textarea {
 
 	header.special {
 		margin-bottom: 5em;
-		padding-top: 7em;
+		padding-top: 0;
 		position: relative;
 		text-align: center;
 	}
@@ -2470,9 +2500,9 @@ input, select, textarea {
 		input[type="reset"].primary,
 		button.primary,
 		.button.primary {
-			background: #83d3c9;
-			border-color: #83d3c9;
-			color: #fff !important;
+			background: #ffdb29;
+			border-color: #ffdb29;
+			color: black !important;
 		}
 
 			input[type="button"].primary:hover,
@@ -2480,8 +2510,8 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background: #96dad1 !important;
-				border-color: #96dad1 !important;
+				background: #ffdb29 !important;
+				border-color: #000 !important;
 			}
 
 		input[type="button"].fit,
@@ -2696,7 +2726,7 @@ input, select, textarea {
 					}
 
 					#portfolio_section nav ul li.current > a {
-						font-weight: 900;
+						/* font-weight: 900; */
 					}
 					#portfolio_section nav ul li a:focus {
 						background: rgba(0, 0, 0, 0.2);
@@ -2961,7 +2991,7 @@ input, select, textarea {
 
 				#banner .inner header h2 {
 					font-size: 2.5em;
-					font-weight: 900;
+					font-weight: 1200;
 					letter-spacing: 0.2em;
 					margin: 0;
 					padding-left: 0.05em;
