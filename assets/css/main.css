@@ -246,7 +246,7 @@ footer, header, hgroup, menu, nav, section {
 
 		#expdiv1{
 			align-self: center;
-			padding: 20px 0 0 60px;
+			padding: 20px 60px 0 60px;
 		}
 
 		#expdiv2{
@@ -976,14 +976,10 @@ input, select, textarea {
 					
 					
 
-					/* .exp-image{
-						position: absolute;
-						top: 0;
-						bottom: 0;
-						margin: auto;
-						/* margin: 85px 0 0 0; */
-						/* vertical-align: middle; */
-					} */
+					.exp-image{
+						padding: 20px 0 0 0;
+						
+					} 
 
 					.row.gtr-50.gtr-uniform {
 						margin-top: -20px;
