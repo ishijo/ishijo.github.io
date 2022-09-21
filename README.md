@@ -1,1 +1,1 @@
-## You can visit the Portfolio site [here](https://ishijo.github.io/ishikajohari.github.io/).
+## Visit the Portfolio site [here](https://ishijo.github.io/ishikajohari.github.io/).
