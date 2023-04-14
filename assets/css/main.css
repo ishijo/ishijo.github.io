@@ -43,6 +43,17 @@ footer, header, hgroup, menu, nav, section {
 		margin: 0;
 	}
 
+	.blogname{
+		margin: 0;
+		font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 500;
+	}
+
+	.blog-subheading{
+		font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #757575;
+		font-weight: 400;
+	}
 
 
 	/* .tooltip {
