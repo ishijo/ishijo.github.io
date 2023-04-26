@@ -22,6 +22,7 @@
 	--color-2: #668099;
 	--color-1: #94a6b8;
 	--color-70: #c2ccd6;
+	--color-60: #e0e6eb;
 	--color-50: #c4ccd4;
 	--color-40: #c7ccd1;
 	--color-30: #c9cccf;
@@ -29,14 +30,103 @@
 	--color-10: #ffffff;
   }
 
+  /* .grid-container{
+	display: grid;
+	grid: auto auto;
+	grid-gap: 10px;
+	background-color: #2196F3;
+	padding: 10px;
+  } */
+
+
+
+  /* .page {
+	display: grid;
+	grid-template-area: "a b c";
+	grid-template-columns: 33% 34% 33%
+  }
+  
+  @media (max-width: 650px) {
+	.page {
+	  grid-template-columns: 100%;
+	  grid-template-area: 
+		"a"
+		"b"
+		"c";
+	}
+  } */
+
+
+
+  /* @media screen and (max-width: 1300px){
+	p#name-heading{
+	  font-size: 90px;
+	  line-height: 75px;
+	}
+	p span.indent-name{
+	  padding-left: 1.07em; 
+	}
+  }
+  @media screen and (max-width: 1000px){
+	p#name-heading{
+	  font-size: 75px;
+	  line-height: 60px;
+	}
+	p span.indent-name{
+	  padding-left: 1.045em; 
+	}
+  }
+  @media screen and (max-width: 801px){
+	p#name-heading{
+	  font-size: 55px;
+	  line-height: 47px;
+	}
+	p span.indent-name{
+	  padding-left: 1em; 
+	}
+  
+	.container-fluid.resume{
+	  width: 70%;
+	}
+  }
+  @media screen and (max-width: 601px){
+	p#name-heading{
+	  font-size: 48px;
+	  line-height: 39px;
+	}
+	p span.indent-name{
+	  padding-left: 0.99em; 
+	}
+	.col-lg-10.align-self-end{
+	  padding-left: 35px;
+	}
+  
+	.container-fluid.resume, .container-fluid.skills, .container-fluid.code-snip{
+	  width: 55%;
+	}
+  }
+  @media screen and (max-width: 401px){
+	p#name-heading{
+	  font-size: 40px;
+	  line-height: 34px;
+	}
+	p span.indent-name{
+	  padding-left: 0.9em; 
+	}
+  } */
+
+
+
   #experience_section{
-	background-color: var(--color-40);
-	border-radius: 12px;
+	background-color: var(--color-60);
+	border-radius: 20px;
 	color: #000000;
+	width: 85%;
 	
   }
 
   .exp-subheading{
+	letter-spacing: 1.5px;
   }
 
 html, body, div, span, applet, object,
@@ -225,7 +315,7 @@ footer, header, hgroup, menu, nav, section {
 		  transform: translate3d(0, 0, 0);
 		}
 		100% {
-		  transform: translate3d(-5440px, 0, 0); /* The image width */
+		  transform: translate3d(-4540px, 0, 0); /* Adjust a combination of this number and the speed below for the perfect animation */
 		}
 	  }
 
@@ -235,7 +325,7 @@ footer, header, hgroup, menu, nav, section {
 		/* min-width: 300px; */
 		object-fit: cover;
 		margin-left: 200px;
-		animation: slide 40s linear infinite;
+		animation: slide 10s linear infinite; /*Adjust a combination of this speed and the number above for the perfect animation*/
 	  }
 
 
@@ -343,7 +433,7 @@ footer, header, hgroup, menu, nav, section {
 		height: 100%;
 		position: relative;
 		/* you can change the animation settings from below */
-		animation: slideshow 2s linear infinite;
+		animation: slideshow 10s linear infinite; /*changing this wont affect speed go to the other one*/
 	 }
 
 	@keyframes slideshow {
@@ -569,7 +659,8 @@ input, select, textarea {
 			}
 
 			.container#skills_section {
-				width: 1350px;
+				width: 90%;
+				/*width: 1350px;*/
 			}
 
 				.container.medium {
@@ -1066,7 +1157,7 @@ input, select, textarea {
 
 					.exp-image{
 						padding: 2px 0 0 0;
-						
+						margin-right: 40px;
 					} 
 
 					.row.gtr-50.gtr-uniform {
@@ -1325,6 +1416,7 @@ input, select, textarea {
 				.row {
 					margin-top: -40px;
 					margin-left: -40px;
+					width: 90%;
 				}
 
 					.row > * {
@@ -2746,10 +2838,7 @@ input, select, textarea {
 				font-weight: 300;
 			}
 
-			/* #portfolio_section{
-				border-radius: 12px;
-				font-family: 'Lato', sans-serif;
-			} */
+		
 
 			#portfolio_section nav {
 				letter-spacing: 0.075em;
@@ -3202,6 +3291,7 @@ input, select, textarea {
 			header.special {
 				padding-top: 0;
 				margin-bottom: 4em;
+				width: 90%;
 			}
 
 	}
