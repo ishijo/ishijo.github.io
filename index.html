@@ -6,7 +6,7 @@
 	<title>Ishika Johari's Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
+	
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -16,20 +16,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap"
 		rel="stylesheet">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-
-
 	<link rel="icon" href="images/banners/favicon11.ico" type="image/x-icon">
 
 	<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
 	<script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
-
 
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -40,13 +30,6 @@
 			});
 		});
 	</script>
-
-
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
-	</style>
-
-
 </head>
 
 
@@ -112,10 +95,10 @@
 
 			<header class="special container" id="aboutme_section">
 				<h2>About Me</h2>
-				<div class="row" style="padding: 5px 0 0 0;">
-					<div class="col-para-left">
-						<!-- <h2 >About Me</h2> -->
-						<p style="text-align: left; padding-right: 10px;">Hey! I'm a Data Science Analyst at Dell
+				<div class="row" style="padding: 5px 0 0 0; margin: 0 auto;"
+					
+					<div class="col-para-left col-12-narrower" style="display: inline-block;">
+						<p style="text-align: justify; align-items: center;;">Hey! I'm a Data Science Analyst at Dell
 							Technologies &#128538 !
 							I previously pursued my B. Tech in Computer and Communication Engineering from Manipal
 							University Jaipur (Graduated May 2022).
@@ -131,8 +114,9 @@
 							during my leisure time!
 						</p>
 					</div>
-					<div class="col-photo-right"><img class="me-img" src="images/me2.jpg" height="300px" width=""
-							alt=""></div>
+					<div class="col-photo-right col-12-narrower" style="display: inline-block;"><img class="me-img" src="images/me2.jpg" height="" width="" alt="">
+					</div>
+					
 
 				</div>
 			</header>
@@ -214,7 +198,8 @@
 
 
 			<!-- Portfolio Section -->
-			<section class="wrapper style3 container special" id="portfolio_section" style="border-radius: 20px; width:85%" class="portfolio_section">
+			<section class="wrapper style3 container special" id="portfolio_section"
+				style="border-radius: 20px; width:85%" class="portfolio_section">
 
 				<header class="major">
 					<h2>Portfolio</h2>
@@ -223,9 +208,9 @@
 				<nav id="nav">
 					<ul class="portfolio-navbar">
 						<li class="nav-item current"><a id="focusmeplease" href="./project.html">Projects</a></li>
-						<li class="nav-item submenu"><a href="./visualisation.html">Visualisations</a></li>
-						<li class="nav-item submenu"><a href="./kaggle.html">Kaggle</a></li>
-						<li class="nav-item submenu"><a href="./blog.html">Blogs</a></li>
+						<li class="nav-item submenu"><a href="./visualisation.html">Dashboards</a></li>
+						<li class="nav-item submenu"><a href="./kaggle.html">Notebooks</a></li>
+						<li class="nav-item submenu"><a href="./blog.html">Articles</a></li>
 					</ul>
 				</nav>
 
@@ -238,9 +223,30 @@
 							</div> -->
 
 				<div id="dynamic_portion">
-					<div class="row">
+					<div class="row" style="margin: 0 auto;">
 						<!-- <div id="project_section"> -->
-						<div class="col-6 col-12-narrower">
+						<div class="col-6 col-12-narrower" style="display: inline-block;">
+
+							<section>
+								<a target="_blank" href="https://travel-itinerary-generator.herokuapp.com/"
+									class="image featured trs"><img class="static" src="images/trs.jpg" /><img
+										class="active hover_border" src="images/trs.gif" /></a>
+								<header>
+									<h3 class="projectname"><a target="_blank"
+											href="https://travel-itinerary-generator.herokuapp.com/">Travel Recommender
+											and Itinerary Generator</a> </h3>
+									<p class="gitlink"><a target="_blank"
+											href="https://github.com/ishijo/Travel_Itinerary_Generator">Github</a></p>
+								</header>
+								<p>A Travel Itinerary generator customised to the user's vacation type, budget and other
+									details. The Itinerary suggests possible places the user would like to visit
+									tailored
+									to the available timings. This project considers only Jaipur, India as the
+									destination
+									city at the moment.</p>
+							</section>
+						</div>
+						<div class="col-6 col-12-narrower" style="display: inline-block;">
 
 							<section>
 								<a target="_blank" href="https://travel-itinerary-generator.herokuapp.com/"
@@ -352,12 +358,17 @@
 							</ul>
 						</p>
 						<h3 class="exp-subheading">Winter SWE Intern: Feb'22-May'22 (Dell Technologies)</h3>
-						<p><ul>
-							<li>As a member of the Information Data Governance team, played a key role in identifying
-							inconsistencies within Highly Restricted and Restricted data sets through the use of SQL
-							programming, Power BI visualization analysis, and Informatica Data Quality ETL software.</li>
-							<li>Conducted deep-dive analysis and data profiling to ensure optimal data quality and accuracy.</li>
-						</ul>
+						<p>
+							<ul>
+								<li>As a member of the Information Data Governance team, played a key role in
+									identifying
+									inconsistencies within Highly Restricted and Restricted data sets through the use of
+									SQL
+									programming, Power BI visualization analysis, and Informatica Data Quality ETL
+									software.</li>
+								<li>Conducted deep-dive analysis and data profiling to ensure optimal data quality and
+									accuracy.</li>
+							</ul>
 						</p>
 						<h3 class="exp-subheading">Summer SWE Intern: Jun'21-Jul'21 (Dell Technologies)</h3>
 						<p>
