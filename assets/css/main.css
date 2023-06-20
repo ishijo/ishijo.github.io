@@ -127,12 +127,30 @@
   }
 
 
-  @media screen and (max-width: 601px){
+  @media screen and (max-width: 801px){
 	.me-img{
 		border-radius: 170px;
 		width: auto;
 		margin-left: 0px;
 	}
+	#banner .inner {
+		/* -moz-animation: reveal-banner 1s 0.25s ease-in-out;
+		-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+		-ms-animation: reveal-banner 1s 0.25s ease-in-out;
+		animation: reveal-banner 1s 0.25s ease-in-out;
+		-moz-animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
+		background: rgba(0, 0, 0, 0.1) !important;/* 52, 27, 43, */
+		/* color: #fff;
+		display: inline-block;
+		opacity: 0;
+		padding: 3em;
+		text-align: center;
+		border-radius: 10px; */
+	}
+
   
   }
 
@@ -140,7 +158,7 @@
   .bigger-device-401px{display: block;}
   /* .mobile-device-401px{display: none !important;} */
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 601px){
 	.bigger-device-1000px{display: none !important;}
   .mobile-device-1000px{display: none !important;}
 
@@ -161,6 +179,26 @@
 	}
 	.row.gtr-50{
 		margin: 0 !important;
+	}
+
+  } 
+  @media screen and (max-width: 450px){
+	#banner .inner {
+		/* -moz-animation: reveal-banner 1s 0.25s ease-in-out;
+		-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+		-ms-animation: reveal-banner 1s 0.25s ease-in-out;
+		animation: reveal-banner 1s 0.25s ease-in-out;
+		-moz-animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
+		background: none !important;/* 52, 27, 43, */
+		/* color: #fff;
+		display: inline-block;
+		opacity: 0;
+		padding: 3em;
+		text-align: center;
+		border-radius: 10px; */
 	}
 
   } 
@@ -3960,6 +3998,23 @@ input, select, textarea {
 					#banner .inner br {
 						display: none;
 					}
+				/* #banner .innertest {
+					background: none;
+					display: block;
+					padding: 0 1.5em;
+				}
+
+					#banner .innertest header h2 {
+						font-size: 1.5em;
+					}
+
+					#banner .innertest p {
+						text-align: center;
+					}
+
+					#banner .innertest br {
+						display: none;
+					} */
 
 		/* Main */
 
