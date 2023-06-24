@@ -22,9 +22,9 @@
 	--color-2: #668099;
 	--color-1: #94a6b8;
 	--color-70: #c2ccd6;
-	/* --color-60: #e0e6eb; */
+	--color-60: #e0e6eb;
 	/* --color-60: #d3dfeb; */
-	--color-60: #d9e4ee;
+	/* --color-60: #d9e4ee; */
 	--color-50: #c4ccd4;
 	--color-40: #c7ccd1;
 	--color-30: #c9cccf;
@@ -431,7 +431,8 @@ footer, header, hgroup, menu, nav, section {
 	  /* Key Filters */
 
 	  /* .BtnContainer {
-		  margin: 60px;
+		  margin: 35px auto;
+		  max-width: 90%;
 	  }
 
 	  .btn {
@@ -439,24 +440,34 @@ footer, header, hgroup, menu, nav, section {
 		-moz-border-radius: 12; 
 		border-radius: 10px;
 		margin: 2px;
-		border: solid var(--color-70) 2px;
-		background-color: #ffffff;
-		font-size: 0.7em;
+		border: none;
+		background-color: var(--color-00);
+		font-size: 0.8em;
 		line-height: 2em;
-		padding: 5px 15px;
-		margin: 6px;
+		padding: 2px 15px;
+		margin: 0 1px 5px 1px;
+		font-family: 'Lato', sans-serif !important;
+		font-weight: 300 !important;
+		min-width: 0 !important;
 	  }
 	  
-	  .btn:hover {
+	   .btn:hover {
 		color: #ffffff;
-		border: solid var(--color-70) 2px;
-		background-color: black;
+		background: rgba(161, 138, 26, 0.9);
+		border-radius: 10px;
+		outline: none;
 	  }
 	  .btn:focus {
 		color: #ffffff;
 		border: solid var(--color-70) 2px;
-		background-color: black;
-	  } */
+		background: rgba(161, 138, 26, 0.9);
+	  }  */
+	  
+
+	  div#portfolio-area.row{
+		margin: 40px auto !important;
+	  }
+
 
 
 	  .me-img{
