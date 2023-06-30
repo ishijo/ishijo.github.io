@@ -429,8 +429,17 @@ footer, header, hgroup, menu, nav, section {
 
 
 	  /* Key Filters */
+	  img.shieldsbadge{
+		height: 24.66px;
+		width: auto;
+		margin-right: 5px;
+		
+	  }
 
-	  /* .BtnContainer {
+
+
+
+	 .BtnContainer {
 		  margin: 35px auto;
 		  max-width: 90%;
 	  }
@@ -461,7 +470,7 @@ footer, header, hgroup, menu, nav, section {
 		color: #ffffff;
 		border: solid var(--color-70) 2px;
 		background: rgba(161, 138, 26, 0.9);
-	  }  */
+	  }  
 	  
 
 	  div#portfolio-area.row{
