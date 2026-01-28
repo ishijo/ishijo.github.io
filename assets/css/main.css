@@ -63,7 +63,7 @@
   
   @media screen and (max-width: 1600px){
 	.me-img{
-		border-radius: 170px;
+		border-radius: 270px;
 		width: auto;
 	}
 	.exp-content{
@@ -79,8 +79,13 @@
 
 	.me-img{
 		border-radius: 170px;
+		max-height: 300px !important;
 		width: auto;
-		margin-left: -48px;
+		height: auto !important;
+		margin-left: 48px;
+	}
+	.col-photo-right{
+		padding-right: 50px;
 	}
 	.exp-content{
 		max-width: 75ch !important;
@@ -180,7 +185,8 @@
 	.me-img{
 		border-radius: 170px;
 		/*height: 5%;*/
-		height: 200px !important; 
+		max-height: 300px !important;
+		height: auto !important;
 		width: auto;
 		margin-left: 0px;
 	}
@@ -356,7 +362,7 @@ footer, header, hgroup, menu, nav, section {
 
 	  ul.side.icons {
 		padding: 0px 10px 10px 5px;
-		background:rgba(0, 0, 0, 0.2);
+		background:rgba(0, 0, 0, 0.5);
 		/* border-radius: 15px; */
 		border-top-right-radius: 17px;
 		border-bottom-right-radius: 17px;
@@ -471,7 +477,12 @@ footer, header, hgroup, menu, nav, section {
 
 
 	  .me-img{
-		border-radius: 170px;
+		border-radius: 220px;
+		max-width: 100%;
+		max-height: 300px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
 	}
 
 	  .col-photo-right{
@@ -479,20 +490,26 @@ footer, header, hgroup, menu, nav, section {
 		  float: right;
 		  margin-top: 70px;
 		  margin-bottom: 30px;
+		  box-sizing: border-box;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
 		}
 		.col-photo-middle{
 			margin: 50px auto;
 		  }
 		.no-padding{
 			padding: 0 !important;
+			overflow: hidden;
 		}
 
 	  .col-para-left{
-		width: 75%;
+		width: 70%;
 		float: left;
 		margin-top: 70px;
 		margin-bottom: 30px;
 		padding-right: 30px;
+		box-sizing: border-box;
 		}
 		
 		.col-para-middle{
@@ -2997,10 +3014,15 @@ input, select, textarea {
 				
 	
 			}
-			.portfolio-navbar > .active > a { 
-				background-color: black ; 
+			.portfolio-navbar > .active > a {
+				background-color: black ;
 			}
-	
+			.portfolio-navbar > .current > a {
+				background: rgba(0, 0, 0, 0.35);
+				border-radius: 10px;
+				color: inherit;
+			}
+
 				#portfolio_section nav ul {
 					list-style: none;
 					padding-left: 0;
@@ -3084,7 +3106,7 @@ input, select, textarea {
 			#header nav ul {
 				list-style: none;
 				padding-left: 0;
-				background:rgba(0, 0, 0, 0.2);
+				background:rgba(0, 0, 0, 0.5);
 				border-radius: 12px;
 				padding: 5px 0px;
 				color: white;
@@ -3307,7 +3329,7 @@ input, select, textarea {
 			-webkit-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: rgba(0, 0, 0, 0.2);/* 52, 27, 43, */
+			background: rgba(0, 0, 0, 0.4);/* 52, 27, 43, */
 			color: #fff;
 			display: inline-block;
 			opacity: 0;
@@ -3777,28 +3799,29 @@ input, select, textarea {
 					}
 
 					#navButton .toggle:before {
-						color: #fff;
-						content: '\f0c9';
-						font-size: 1em;
-						height: 40px;
-						left: 10px;
-						line-height: 40px;
-						opacity: 0.5;
+						content: '';
+						display: block;
 						position: absolute;
-						top: 11px;
-						width: 60px;
+						height: 33px;
+						left: 10px;
+						top: 14px;
+						width: 39px;
 						z-index: 1;
+						background-image: url('https://img.icons8.com/ios/50/FFFFFF/menu--v7.png');
+						background-size: 26px 26px;
+						background-repeat: no-repeat;
+						background-position: center;
 					}
 
 					#navButton .toggle:after {
-						background: rgba(163, 169, 170, 0.75);
+						background: rgba(0, 0, 0, 0.5);
 						border-radius: 2px;
 						content: '';
-						height: 40px;
+						height: 33px;
 						left: 10px;
 						position: absolute;
-						top: 10px;
-						width: 60px;
+						top: 13px;
+						width: 39px;
 					}
 
 			#navPanel {
@@ -4101,18 +4124,17 @@ input, select, textarea {
 		/* Nav */
 
 			#navButton .toggle:before {
-				top: 8px;
+				top: 14px;
 				left: 8px;
-				width: 50px;
-				height: 34px;
-				line-height: 34px;
+				width: 39px;
+				height: 33px;
 			}
 
 			#navButton .toggle:after {
-				top: 8px;
+				top: 13px;
 				left: 8px;
-				width: 50px;
-				height: 34px;
+				width: 39px;
+				height: 33px;
 			}
 			
 			/* hamburger menu try */

@@ -41,7 +41,15 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
+			// Load projects by default on page load
+			$("#dynamic_portion").load("./project.html");
+
 			$("#portfolio_section #nav a").click(function () {
+				// Remove current class from all nav items
+				$("#portfolio_section #nav .nav-item").removeClass("current");
+				// Add current class to clicked item's parent li
+				$(this).parent().addClass("current");
+
 				$("#dynamic_portion").load($(this).attr("href"));
 
 				return false;
@@ -90,12 +98,12 @@
 		<header id="header" class="alt">
 			<nav id="nav">
 				<ul>
-					<li class="submenu"><a href="#aboutme_section">About</a></li>
-					<li class="submenu"><a href="#skills_section">Skills</a></li>
-					<li class="submenu"><a href="#portfolio_section">Portfolio</a></li>
-					<li class="submenu"><a href="#experience_section">Experience</a></li>
-					<li class="submenu"><a href="#resume_section">Resume</a></li>
-					<li class="submenu"><a href="#footer">Contact Me</a></li>
+					<li class="submenu"><a href="#aboutme_section" class="scrolly">About</a></li>
+					<li class="submenu"><a href="#skills_section" class="scrolly">Skills</a></li>
+					<li class="submenu"><a href="#portfolio_section" class="scrolly">Portfolio</a></li>
+					<li class="submenu"><a href="#experience_section" class="scrolly">Experience</a></li>
+					<li class="submenu"><a href="#resume_section" class="scrolly">Resume</a></li>
+					<li class="submenu"><a href="#footer" class="scrolly">Contact Me</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -109,7 +117,7 @@
 					<h2 id="mainheading">Hey, this is <span class="my-name">Ishika Johari</span>! <span
 							class="wave">👋</span></h2>
 				</header>
-				<p id="banner-text">MS in Information Management Grad at <b>University of Washington</b><br>Senior Data Science Analyst at <b>Dell Technologies</b><br>Kaggle <b>3X Expert</b> (Notebooks, Datasets, Discussions)</p>
+				<p id="banner-text">MS in Information Management @ <b>University of Washington</b><br><b>Research Assistant</b> @ UW eScience Institute<br>Kaggle <b>3X Expert</b> | Capstone with <b>Google</b> | Ex–Data Scientist @ <b>Dell Technologies</b></p>
 
 			</div>
 
@@ -121,89 +129,49 @@
 			<header class="special container" id="aboutme_section">
 				<h2>About Me</h2>
 
-				<div class="col-photo-middle mobile-device-401px" style="vertical-align: middle; position: relative; display: inline-block;"><img style="height: 300px" class="me-img" src="images/me.jpeg" height="300px" width=""
+				<div class="col-photo-middle mobile-device-401px" style="vertical-align: middle; position: relative; display: inline-block;"><img style="max-height: 340px" class="me-img" src="images/me.jpeg" width=""
 					alt=""></div>
-				<div class="col-photo-middle mobile-device-1000px" style="vertical-align: middle; position: relative; display: inline-block;"><img style="height: 300px" class="me-img" src="images/me.jpeg" height="300px" width=""
+				<div class="col-photo-middle mobile-device-1000px" style="vertical-align: middle; position: relative; display: inline-block;"><img style="max-height: 340px" class="me-img" src="images/me.jpeg" width=""
 					alt=""></div>
 
 				<div class="row no-padding" style="margin: 0 auto; padding: 0 50px;">
 
 					<div class="col-para-left bigger-device-401px" style="padding: 0 50px; display: inline-block;">
 						<!-- <h2 >About Me</h2> -->
-						<p style="text-align: justify; padding-right: 10px;">Hey! I'm a Data Science Analyst at Dell
-							Technologies &#128538!
-							I previously pursued my B. Tech in Computer and Communication Engineering from Manipal
-							University Jaipur (Graduated May 2022).
-							Having been a math geek since an early age, I had a predilection for the intersection of
-							math and creative problem
-							solving which boiled down to Machine learning and AI for me personally. Recently
-							I’ve come to love making data vizualizations, trying to derive meaningful
-							insights from strange data to showcase hopefully surprising trends. This paved way
-							for my inclination towards Data Science as a whole. I'd be glad to connect through my
-							socials! (on the left &#128521;)
-							<br><br> Other interests of mine lie in the domains of Marketing and Business strategy and I
-							also have a curiosity for Psychology, Music and Design &#128171. I love to sing and read
-							during my leisure time!
+						<p style="text-align: justify; padding-right: 10px;">Hey! As of early 2026 I’m pursuing my master’s degree at <b>University of Washington</b>, with prior industry experience as a <b>Data Scientist at Dell Technologies</b>, where I built analytics and ML-driven insights for product and business decisions &#x1F60A; I’m also a <b>Research Assistant</b> at the eScience Institute, where my current project involves collaborating with astronomical researchers from <b>Rice University</b> and <b>Caltech</b> on open-source scientific data platforms and large-scale datasets. <br><br>
+							I’m deeply interested in understanding user behavior through data, especially customer clickstream analysis and how people interact with digital products. I enjoy working on problems around user journeys, engagement, drop-offs, and personalization, and I’m drawn to data science roles focused on product analytics, behavioral modeling, and recommendation or personalization systems. <br><br>
+							Alongside this, I’m currently working on a capstone project with <b>Google</b>, applying data and systems thinking to real-world, production-scale problems &#x1F4A1; <br><br>
+							Outside of data, I’m curious about marketing, psychology, music, and design &#x1F3A7; &#x1F3A8; I love singing and reading in my free time. I’d be glad to connect through my socials! (on the left &#x1F609;)
 						</p>
 					</div>
 					<div class="col-para-left bigger-device-1000px" style="padding: 0 50px; display: inline-block;">
 						<!-- <h2 >About Me</h2> -->
-						<p style="text-align: justify; padding-right: 10px;">Hey! I'm a Data Science Analyst at Dell
-							Technologies &#128538!
-							I previously pursued my B. Tech in Computer and Communication Engineering from Manipal
-							University Jaipur (Graduated May 2022).
-							Having been a math geek since an early age, I had a predilection for the intersection of
-							math and creative problem
-							solving which boiled down to Machine learning and AI for me personally. Recently
-							I’ve come to love making data vizualizations, trying to derive meaningful
-							insights from strange data to showcase hopefully surprising trends. This paved way
-							for my inclination towards Data Science as a whole. I'd be glad to connect through my
-							socials! (on the left &#128521;)
-							<br><br> Other interests of mine lie in the domains of Marketing and Business strategy and I
-							also have a curiosity for Psychology, Music and Design &#128171. I love to sing and read
-							during my leisure time!
+						<p style="text-align: justify; padding-right: 10px;">Hey! As of early 2026 I’m pursuing my master’s degree at <b>University of Washington</b>, with prior industry experience as a <b>Data Scientist at Dell Technologies</b>, where I built analytics and ML-driven insights for product and business decisions &#x1F60A; I’m also a <b>Research Assistant</b> at the eScience Institute, where my current project involves collaborating with astronomical researchers from <b>Rice University</b> and <b>Caltech</b> on open-source scientific data platforms and large-scale datasets. <br><br>
+							I’m deeply interested in understanding user behavior through data, especially customer clickstream analysis and how people interact with digital products. I enjoy working on problems around user journeys, engagement, drop-offs, and personalization, and I’m drawn to data science roles focused on product analytics, behavioral modeling, and recommendation or personalization systems. <br><br>
+							Alongside this, I’m currently working on a capstone project with <b>Google</b>, applying data and systems thinking to real-world, production-scale problems &#x1F4A1; <br><br>
+							Outside of data, I’m curious about marketing, psychology, music, and design &#x1F3A7; &#x1F3A8; I love singing and reading in my free time. I’d be glad to connect through my socials! (on the left &#x1F609;)
 						</p>
 					</div>
 					<div class="col-para-middle mobile-device-401px" style="padding: 0 50px; display: inline-block;">
 						<!-- <h2 >About Me</h2> -->
-						<p style="text-align: justify; padding-right: 10px;">Hey! I'm a Data Science Analyst at Dell
-							Technologies &#128538!
-							I previously pursued my B. Tech in Computer and Communication Engineering from Manipal
-							University Jaipur (Graduated May 2022).
-							Having been a math geek since an early age, I had a predilection for the intersection of
-							math and creative problem
-							solving which boiled down to Machine learning and AI for me personally. Recently
-							I’ve come to love making data vizualizations, trying to derive meaningful
-							insights from strange data to showcase hopefully surprising trends. This paved way
-							for my inclination towards Data Science as a whole. I'd be glad to connect through my
-							socials! (on the left &#128521;)
-							<br><br> Other interests of mine lie in the domains of Marketing and Business strategy and I
-							also have a curiosity for Psychology, Music and Design &#128171. I love to sing and read
-							during my leisure time!
+						<p style="text-align: justify; padding-right: 10px;">Hey! As of early 2026 I’m pursuing my master’s degree at <b>University of Washington</b>, with prior industry experience as a <b>Data Scientist at Dell Technologies</b>, where I built analytics and ML-driven insights for product and business decisions &#x1F60A; I’m also a <b>Research Assistant</b> at the eScience Institute, where my current project involves collaborating with astronomical researchers from <b>Rice University</b> and <b>Caltech</b> on open-source scientific data platforms and large-scale datasets. <br><br>
+							I’m deeply interested in understanding user behavior through data, especially customer clickstream analysis and how people interact with digital products. I enjoy working on problems around user journeys, engagement, drop-offs, and personalization, and I’m drawn to data science roles focused on product analytics, behavioral modeling, and recommendation or personalization systems. <br><br>
+							Alongside this, I’m currently working on a capstone project with <b>Google</b>, applying data and systems thinking to real-world, production-scale problems &#x1F4A1; <br><br>
+							Outside of data, I’m curious about marketing, psychology, music, and design &#x1F3A7; &#x1F3A8; I love singing and reading in my free time. I’d be glad to connect through my socials! (on the left &#x1F609;)
 						</p>
 					</div>
 					<div class="col-para-middle mobile-device-1000px" style="padding: 0 50px; display: inline-block;">
 						<!-- <h2 >About Me</h2> -->
-						<p style="text-align: justify; padding-right: 10px;">Hey! I'm a Data Science Analyst at Dell
-							Technologies &#128538!
-							I previously pursued my B. Tech in Computer and Communication Engineering from Manipal
-							University Jaipur (Graduated May 2022).
-							Having been a math geek since an early age, I had a predilection for the intersection of
-							math and creative problem
-							solving which boiled down to Machine learning and AI for me personally. Recently
-							I’ve come to love making data vizualizations, trying to derive meaningful
-							insights from strange data to showcase hopefully surprising trends. This paved way
-							for my inclination towards Data Science as a whole. I'd be glad to connect through my
-							socials! (on the left &#128521;)
-							<br><br> Other interests of mine lie in the domains of Marketing and Business strategy and I
-							also have a curiosity for Psychology, Music and Design &#128171. I love to sing and read
-							during my leisure time!
+						<p style="text-align: justify; padding-right: 10px;">Hey! As of early 2026 I’m pursuing my master’s degree at <b>University of Washington</b>, with prior industry experience as a <b>Data Scientist at Dell Technologies</b>, where I built analytics and ML-driven insights for product and business decisions &#x1F60A; I’m also a <b>Research Assistant</b> at the eScience Institute, where my current project involves collaborating with astronomical researchers from <b>Rice University</b> and <b>Caltech</b> on open-source scientific data platforms and large-scale datasets. <br><br>
+							I’m deeply interested in understanding user behavior through data, especially customer clickstream analysis and how people interact with digital products. I enjoy working on problems around user journeys, engagement, drop-offs, and personalization, and I’m drawn to data science roles focused on product analytics, behavioral modeling, and recommendation or personalization systems. <br><br>
+							Alongside this, I’m currently working on a capstone project with <b>Google</b>, applying data and systems thinking to real-world, production-scale problems &#x1F4A1; <br><br>
+							Outside of data, I’m curious about marketing, psychology, music, and design &#x1F3A7; &#x1F3A8; I love singing and reading in my free time. I’d be glad to connect through my socials! (on the left &#x1F609;)
 						</p>
 					</div>
 					
-					<div class="col-photo-right bigger-device-401px" style="vertical-align: middle; position: relative; display: inline-block;"><img style="height: 300px" class="me-img" src="images/me.jpeg" height="300px" width=""
+					<div class="col-photo-right bigger-device-401px"><img style="max-height: 340px" class="me-img" src="images/me.jpeg" width=""
 							alt=""></div>
-					<div class="col-photo-right bigger-device-1000px" style="vertical-align: middle; position: relative; display: inline-block;"><img style="height: 300px" class="me-img" src="images/me.jpeg" height="300px" width=""
+					<div class="col-photo-right bigger-device-1000px"><img style="max-height: 340px" class="me-img" src="images/me.jpeg" width=""
 						alt=""></div>
 
 				</div>
@@ -406,39 +374,42 @@
 					<!-- <div class="image-70-left" id="expdiv1"> -->
 					<div class="" id="expdiv1">
 						<div class="exp-content">
-						<h3 class="exp-subheading">Masters in Information Management Grad <em>at</em> <i style="color: #4b2e83; font-weight: 400;">University of Washington</i></h3>
+						<h3 class="exp-subheading">Data Science Graduate Research Scholar (SSEC OVRO-LWA Project): Sep'25–Present <em>at</em> <i style="color: #4b2e83; font-weight: 400;">eScience Institute, University of Washington</i></h3>
 						<p>
 							<ul id="experience">
-								<li>Coursework: Principles of Information Project Management, Foundations of Information Management, Management and Strategic Leadership, Policy and Ethics in Information Management, Product Strategy & Leadership, Customer Analytics 
-									</li>
+								<li>Developing Python analytics platform for Caltech's 96TB radio astronomy dataset, implementing distributed data processing with Xarray and Zarr for large-scale time series analysis and multi-dimensional data exploration.</li>
+								<li>Building interactive visualization and statistical analysis tools using HoloViz for astronomical data mining, collaborating with Caltech and Rice researchers on cloud-based analytics infrastructure via S3 API.</li>
 							</ul>
 						</p>
-							<h3 class="exp-subheading">Data Science Analyst: Aug'22-Present <em>at</em> <i style="color: #0076CE; font-weight: 300;">Dell Technologies</i></h3>
+
+						<h3 class="exp-subheading">Data Science Intern: Jun'25–Sep'25 <em>at</em> <i style="color: #4b2e83; font-weight: 400;">University of Washington, UW IT</i></h3>
 						<p>
 							<ul id="experience">
-								<li>Collaborating with a team to develop a keyword-based self-serve chatbot for internal
-									stakeholders, aimed at streamlining
-									communication and improving operational efficiency.</li>
-								<li>Spearheaded the development of an advanced entity recognition system using SpaCy,
-									resulting
-									in improved accuracy and efficiency within the system.</li>
-								<li>Conducting extensive research on Bayesian Statistics as a possible alternative to
-									current
-									practices</li>
+								<li>Engineered LSTM forecasting system integrating transactional databases via SQL Server, implementing hierarchical temporal feature engineering to enable multi-year revenue projections, supporting business growth planning and operational efficiency.</li>
 							</ul>
 						</p>
+
+						<h3 class="exp-subheading">Data Scientist 2 <span style="font-size: 0.8em;">(promoted in Mar'24)</span>: Aug'22-Aug'24 <em>at</em> <i style="color: #0076CE; font-weight: 300;">Dell Technologies</i></h3>
+						<p>
+							<ul id="experience">
+								<li>Driving experimentation-focused data science initiatives within the Customer Sentiment organization, supporting data-informed product and marketing decisions.</li>
+								<li>Collaborating with a team to develop a keyword-based self-serve chatbot for internal stakeholders, aimed at streamlining communication and improving operational efficiency.</li>
+								<li>Spearheaded the development of an advanced entity recognition system using SpaCy, resulting in improved accuracy and efficiency within the system.</li>
+								<li>Conducting extensive research on Bayesian Statistics as a possible alternative to current practices</li>
+							</ul>
+						</p>
+
 						<h3 class="exp-subheading">Winter SWE Intern: Feb'22-May'22 <em>at</em> <i style="color: #0076CE; font-weight: 300;">Dell Technologies</i></h3>
-						<p><ul id="experience">
-							<li>As a member of the Information Data Governance team, played a key role in identifying
-							inconsistencies within Highly Restricted and Restricted data sets through the use of SQL
-							programming, Power BI visualization analysis, and Informatica Data Quality ETL software.</li>
-							<li>Conducted deep-dive analysis and data profiling to ensure optimal data quality and accuracy.</li>
-						</ul>
+						<p>
+							<ul id="experience">
+								<li>As a member of the Information Governance team, played a key role in identifying inconsistencies within Highly Restricted and Restricted data sets through the use of SQL programming, Power BI visualization analysis, and Informatica Data Quality ETL software.</li>
+								<li>Conducted deep-dive analysis and data profiling to ensure optimal data quality and accuracy.</li>
+							</ul>
 						</p>
+
 						<h3 class="exp-subheading">Summer SWE Intern: Jun'21-Jul'21 <em>at</em> <i style="color: #0076CE; font-weight: 300;">Dell Technologies</i></h3>
 						<p>
-							Played a role in the Enterprise Data Governance team by mapping Dell's data catalogue and
-							conducting a lineage gap analysis to identify and address inconsistencies.
+							Played a role in the Enterprise Data Governance team by mapping Dell's data catalogue and conducting a lineage gap analysis to identify and address inconsistencies.
 						</p>
 					</div>
 					</div>
@@ -461,7 +432,7 @@
 			<footer>
 				<ul class="buttons">
 					<li><a target="_blank"
-							href="https://drive.google.com/file/d/1eYMAkWKX3xfpc2adr-AmE8w4J8Utddb-/view?usp=share_link"
+							href="https://drive.google.com/file/d/1dzLwv9VNyXvp8In7s8Fm0h4w-1xT8uNQ/view?usp=sharing"
 							class="button primary">Request Resume</a></li>
 				</ul>
 			</footer>
@@ -489,7 +460,7 @@
 			</ul>
 
 			<ul class="copyright">
-				<li>&copy; 2024 Ishika Johari. All Rights Reserved.</li>
+				<li>&copy; 2026 Ishika Johari. All Rights Reserved.</li>
 			</ul>
 
 		</footer>

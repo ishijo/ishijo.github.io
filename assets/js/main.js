@@ -32,8 +32,9 @@
 
 	// Scrolly.
 		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return $header.height() + 10; }
+			speed: 600,
+			easing: 'linear',
+			offset: function() { return $header.height() + 96; }
 		});
 
 	// Dropdowns.
