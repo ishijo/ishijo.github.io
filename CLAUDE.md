@@ -20,9 +20,9 @@
 | `assets/js/main.js` | Template JS (scrolly, dropotron, breakpoints) |
 | `images/` | All images — profile photos, project screenshots, skill icons |
 | `images/banners/` | Favicons and touch icons |
-| `images/skills/` | Skill logo PNGs for the carousel |
+| `images/skills/` | Skill logo PNGs and SVGs for the carousel |
 
-**Responsive About section:** The About bio paragraph is duplicated 4 times in `index.html` (~lines 139–170) for 4 CSS breakpoint variants. Every content edit must be applied to all 4 copies.
+**Responsive About section:** The About bio paragraph is duplicated 4 times in `index.html` (~lines 139–170) for 4 CSS breakpoint variants. Every content edit must be applied to all 4 copies. Note: `.bigger-device-401px` variant is dead code (always hidden); only 3 of the 4 copies actually render.
 
 ## Target audience & positioning
 - Aimed at recruiters and hiring managers for **Product Data Scientist, MLE, and AI Engineer** roles at consumer tech companies (Spotify/Netflix/Airbnb tier).
@@ -32,27 +32,39 @@
 
 | Pass | Focus | Status |
 |------|-------|--------|
-| 1 | About | Copy-drafting stage (not yet applied to site) |
-| 2 | Projects | Not started |
-| 3 | Skills | Not started |
+| 1 | About | DEFERRED — awaiting copy finalization (not yet applied to site) |
+| 2 | Projects | ✅ Done 2026-08-17 — EIA card added, CCRS card refreshed with metrics + tech tags |
+| 3 | Skills | ✅ Done 2026-08-17 — carousel overhauled (removed Hadoop/Teradata/HTML/CSS, added 9 new tools) |
 | 4 | Experience | Not started |
-| 5 | Structural cleanup | Not started |
+| 5 | Structural cleanup | Partially done 2026-08-17 — OG tags added, resume link updated, CSS dead code removed. Remaining: remove jQuery 1.4 dead code, delete template placeholder cards. |
 
 ## Content gaps to close
 - Filed patent (ML-driven insights platform) — currently invisible on site.
 - Kaggle Days global keynote on A/B testing — currently invisible.
 - MS in Information Management at UW — status wording needs updating (banner and About still read as "pursuing").
 - Dell tenure: 2 years, DS1→DS2 promotion — currently understated.
-- Experimentation Intelligence Agent project — not on site yet.
-- Cross-Content Recommender — needs real screenshot (see ccrs.jpg update), live demo link, and metrics.
+- ~~Experimentation Intelligence Agent project — not on site yet.~~ Added 2026-08-17.
+- ~~Cross-Content Recommender — needs real screenshot, live demo link, and metrics.~~ Card refreshed 2026-08-17. Live demo link still blocked (deployment issue).
 
 ## Structural issues to fix
-- About section paragraph duplicated 4x for responsive breakpoints — investigate whether CSS-only solution can reduce to 1 copy.
-- Missing Open Graph / Twitter card meta tags — link preview renders blank when shared.
-- "Request Resume" links to a Google Drive folder — replace with a direct PDF download from the repo.
-- Skills icons don't reflect current stack. Remove: Hadoop, Teradata, standalone HTML/CSS. Add: PyTorch, LangGraph, LlamaIndex, ChromaDB/FAISS, SBERT/sentence-transformers, FastAPI, AWS, MLflow, and experimentation tooling.
+- About section paragraph duplicated 4x for responsive breakpoints — `.bigger-device-401px` variant is dead code; could reduce to 3 copies or investigate CSS-only solution for 1 copy.
+- ~~Missing Open Graph / Twitter card meta tags.~~ Added 2026-08-17.
+- ~~"Request Resume" links to Google Drive folder.~~ Changed to `assets/resume.pdf` download 2026-08-17.
+- ~~Skills icons don't reflect current stack.~~ Overhauled 2026-08-17.
 - `index.html:38–39` loads jQuery 1.4 + `js/jquery.ba-hashchange.min.js` (file doesn't exist) — dead code, safe to remove.
 - Template placeholder cards commented out in project.html, blog.html, kaggle.html, visualisation.html — safe to delete.
+
+## Pending assets
+These files are referenced in code but do not exist yet — **action required from site owner**:
+- `images/og-preview.png` — OG/Twitter card image, should be 1200x630px. Tags are live but image will 404 until created.
+- `assets/resume.pdf` — "Download Resume" button will 404 until this file is added.
+- `images/eia_placeholder.svg` — placeholder for EIA project card. Replace with a real screenshot once the project has a UI.
+- CCRS live demo URL — Streamlit deployment blocked; link currently points to GitHub repo.
+
+## Implementation decisions
+- **Skills icons:** LangGraph, LlamaIndex, ChromaDB, FAISS have no official distributable icon. Used text-pill SVGs (dark rounded rectangle with tool name in Lato font) matching site palette. PyTorch, Hugging Face, FastAPI, AWS, MLflow use brand-color SVG icons.
+- **EIA project card:** Uses inline styles for status badge ("In active development" pill) and tech stack tags — no new CSS classes added.
+- **About duplication:** Investigated the 4-copy responsive pattern. No rendering bug exists; CSS correctly shows 1 variant per breakpoint. Removed 2 dead CSS rules (orphaned `.bigger-device-401px{display:block}` outside media queries).
 
 ## Working conventions
 - This is an in-place refresh — no framework migration, no build step introduced. If a change would require one, flag it, don't do it.
