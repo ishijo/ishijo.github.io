@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" width="160" height="180">
+  <!-- AWS Text -->
+  <text x="80" y="85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#232F3E">AWS</text>
+  <!-- Smile/arrow underneath -->
+  <path d="M30,100 Q80,130 130,100" stroke="#FF9900" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Arrow tip -->
+  <polygon points="130,100 120,92 125,103" fill="#FF9900"/>
+  <!-- Subtext -->
+  <text x="80" y="155" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#232F3E">Amazon Web Services</text>
+</svg>

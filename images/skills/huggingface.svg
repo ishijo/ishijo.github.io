@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 180" width="150" height="180">
+  <!-- Dark circle background -->
+  <circle cx="75" cy="65" r="55" fill="#1A1A2E"/>
+  <!-- Face circle -->
+  <circle cx="75" cy="65" r="45" fill="#FFD21E"/>
+  <!-- Left eye -->
+  <ellipse cx="58" cy="55" rx="7" ry="8" fill="#1A1A2E"/>
+  <ellipse cx="60" cy="53" rx="3" ry="3.5" fill="white"/>
+  <!-- Right eye -->
+  <ellipse cx="92" cy="55" rx="7" ry="8" fill="#1A1A2E"/>
+  <ellipse cx="94" cy="53" rx="3" ry="3.5" fill="white"/>
+  <!-- Smile -->
+  <path d="M55,75 Q75,95 95,75" stroke="#1A1A2E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="48" cy="72" rx="6" ry="4" fill="#FF9D00" opacity="0.5"/>
+  <ellipse cx="102" cy="72" rx="6" ry="4" fill="#FF9D00" opacity="0.5"/>
+  <!-- Text -->
+  <text x="75" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#FFD21E">Hugging Face</text>
+</svg>
