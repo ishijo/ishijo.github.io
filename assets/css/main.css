@@ -119,7 +119,6 @@
   }
 
 
-  .bigger-device-401px{display: block;}
   .mobile-device-401px{display: none !important;}
 
   @media screen and (max-width: 901px){
@@ -172,9 +171,6 @@
   }
 
   
-  .bigger-device-401px{display: block;}
-  /* .mobile-device-401px{display: none !important;} */
-
   @media screen and (max-width: 601px){
 
 	.bigger-device-1000px{display: none !important;}
