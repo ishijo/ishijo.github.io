@@ -10,7 +10,7 @@
 
 | File | Content |
 |------|---------|
-| `index.html` | Single-page layout: Banner (~112), About (~129), Skills (~182), Portfolio shell (~256), Experience (~346), Resume (~446), Footer (~463) |
+| `index.html` | Single-page layout: Banner (~112), About (~129), Highlights (~188), Skills (~212), Portfolio shell (~275), Experience (~371), Resume (~446), Footer (~463) |
 | `project.html` | Portfolio → Projects tab (loaded dynamically via jQuery `.load()`) |
 | `blog.html` | Portfolio → Blogs tab (2 Medium post cards) |
 | `kaggle.html` | Portfolio → Kaggle tab (5 notebook cards) |
@@ -32,19 +32,20 @@
 
 | Pass | Focus | Status |
 |------|-------|--------|
-| 1 | About | DEFERRED — awaiting copy finalization (not yet applied to site) |
-| 2 | Projects | ✅ Done 2026-08-17 — EIA card added, CCRS card refreshed with metrics + tech tags |
+| 1 | About | ✅ Done 2026-08-18 — behavioral-science-wedge copy, TIA→EIA lineage, MS completed, patent + Kaggle Days + Google capstone mentioned. Applied to all 4 responsive variants. |
+| 2 | Projects | ✅ Done 2026-08-18 — EIA card added (2026-08-17), CCRS card refreshed (2026-08-17), Google Vanir capstone card added at position 2 (2026-08-18) |
 | 3 | Skills | ✅ Done 2026-08-17 — carousel overhauled (removed Hadoop/Teradata/HTML/CSS, added 9 new tools) |
-| 4 | Experience | Partially done 2026-08-17 — DS2 verb tenses fixed (present→past), intern bullets sharpened. Remaining: DS2 bullet content sharpening, full Experience overhaul deferred to future session. |
+| 4 | Experience | ✅ Done 2026-08-18 — Full overhaul with resume-verbatim bullets. 5 entries: Grad Research Scholar (3 bullets), DS Intern (1), DS2 (3), DS1 (4), Data Analyst Intern (1, consolidated from 2 intern entries). |
 | 5 | Structural cleanup | ✅ Done 2026-08-17 — OG tags added, resume link updated, CSS dead code removed, jQuery 1.4 dead code removed, template placeholder cards deleted, duplicate class attribute fixed, HTML5 UP attribution added, favicon refs fixed in sub-pages, unreferenced skill PNGs deleted, text-pill SVG heights normalized. |
 
 ## Content gaps to close
-- Filed patent (ML-driven insights platform) — currently invisible on site.
-- Kaggle Days global keynote on A/B testing — currently invisible.
-- MS in Information Management at UW — status wording needs updating (banner and About still read as "pursuing").
-- Dell tenure: 2 years, DS1→DS2 promotion — DS2 bullet content still needs sharpening (deferred to Session 2B).
+- ~~Filed patent (ML-driven insights platform) — currently invisible on site.~~ Mentioned in About copy and DS1 Experience bullet 2026-08-18.
+- ~~Kaggle Days global keynote on A/B testing — currently invisible.~~ Mentioned in About copy and Highlights section 2026-08-18.
+- ~~MS in Information Management at UW — status wording needs updating (banner and About still read as "pursuing").~~ Fixed in About and banner 2026-08-18 (now reads "recently finished").
+- ~~Dell tenure: 2 years, DS1→DS2 promotion.~~ Split into DS1 (4 bullets) and DS2 (3 bullets) entries 2026-08-18.
 - ~~Experimentation Intelligence Agent project — not on site yet.~~ Added 2026-08-17.
 - ~~Cross-Content Recommender — needs real screenshot, live demo link, and metrics.~~ Card refreshed 2026-08-17. Live demo link still blocked (deployment issue).
+- ~~Google capstone — not on site.~~ Vanir card added 2026-08-18; mentioned in About copy.
 
 ## Structural issues to fix
 - About section paragraph duplicated 4x for responsive breakpoints — `.bigger-device-401px` variant is dead code; could reduce to 3 copies or investigate CSS-only solution for 1 copy.
@@ -59,6 +60,7 @@ These files are referenced in code but do not exist yet — **action required fr
 - `images/og-preview.png` — OG/Twitter card image, should be 1200x630px. Tags are live but image will 404 until created.
 - ~~`assets/resume.pdf`~~ — Added by site owner 2026-08-11.
 - `images/eia_placeholder.svg` — placeholder for EIA project card. Replace with a real screenshot once the project has a UI.
+- `images/vanir_placeholder.svg` — placeholder for Vanir capstone card. Replace with a real screenshot.
 - CCRS live demo URL — Streamlit deployment blocked; link currently points to GitHub repo.
 
 ## Implementation decisions
@@ -66,6 +68,10 @@ These files are referenced in code but do not exist yet — **action required fr
 - **EIA project card:** Uses inline styles for status badge ("In active development" pill) and tech stack tags — no new CSS classes added.
 - **About duplication:** Investigated the 4-copy responsive pattern. No rendering bug exists; CSS correctly shows 1 variant per breakpoint. Removed 2 dead CSS rules (orphaned `.bigger-device-401px{display:block}` outside media queries).
 - **Text-pill SVG sizing:** Redesigned from 200x60 to 200x80 viewBox (font-size 22→24) and set HTML `height="120"` to match brand SVG icons in the carousel.
+- **Highlights section:** Inline flexbox layout (no new CSS classes) with emoji + text + right-aligned muted date. Uses `wrapper style2 container special` for visual contrast from adjacent Skills (style1).
+- **Vanir card:** Links to upstream Google repo (`github.com/google/vanir`), not a personal fork. "Workshop paper in progress" status pill matches EIA badge style.
+- **Banner tagline:** Dropped credential list in favor of single positioning statement. No longer mentions Kaggle 3X Expert (moved to Highlights).
+- **Experience DS1/DS2 split:** Dell tenure split into two entries with distinct date ranges and team attribution ("Experimentation Team" vs "Data Governance Team"). Title deliberately uses "Graduate Research Scholar" (not "AI Research Scholar" from resume) for consistency with Highlights section.
 
 ## Working conventions
 - This is an in-place refresh — no framework migration, no build step introduced. If a change would require one, flag it, don't do it.
