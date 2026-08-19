@@ -36,7 +36,7 @@
 | 2 | Projects | ✅ Done 2026-08-18 — EIA card added (2026-08-17), CCRS card refreshed (2026-08-17), Google Vanir capstone card added at position 2 (2026-08-18) |
 | 3 | Skills | ✅ Done 2026-08-17 — carousel overhauled (removed Hadoop/Teradata/HTML/CSS, added 9 new tools) |
 | 4 | Experience | ✅ Done 2026-08-18 — Full overhaul with resume-verbatim bullets. 5 entries: Grad Research Scholar (3 bullets), DS Intern (1), DS2 (3), DS1 (4), Data Analyst Intern (1, consolidated from 2 intern entries). |
-| 5 | Structural cleanup | ✅ Done 2026-08-17 — OG tags added, resume link updated, CSS dead code removed, jQuery 1.4 dead code removed, template placeholder cards deleted, duplicate class attribute fixed, HTML5 UP attribution added, favicon refs fixed in sub-pages, unreferenced skill PNGs deleted, text-pill SVG heights normalized. |
+| 5 | Structural cleanup | ✅ Done 2026-08-17, regression fixed 2026-08-19 — OG tags added, resume link updated, CSS dead code removed, jQuery 1.4 CDN removed (tab script moved to EOF to compensate — see `b933904`), template placeholder cards deleted, duplicate class attribute fixed, HTML5 UP attribution added, favicon refs fixed in sub-pages, unreferenced skill PNGs deleted, text-pill SVG heights normalized. |
 
 ## Content gaps to close
 - ~~Filed patent (ML-driven insights platform) — currently invisible on site.~~ Mentioned in About copy and DS1 Experience bullet 2026-08-18.
@@ -52,7 +52,7 @@
 - ~~Missing Open Graph / Twitter card meta tags.~~ Added 2026-08-17.
 - ~~"Request Resume" links to Google Drive folder.~~ Changed to `assets/resume.pdf` download 2026-08-17.
 - ~~Skills icons don't reflect current stack.~~ Overhauled 2026-08-17.
-- ~~`index.html:38–39` loads jQuery 1.4 + `js/jquery.ba-hashchange.min.js` (file doesn't exist) — dead code.~~ Removed 2026-08-17.
+- ~~`index.html:38–39` loads jQuery 1.4 + `js/jquery.ba-hashchange.min.js` (file doesn't exist) — dead code.~~ jQuery 1.4 CDN removed 2026-08-17; caused Portfolio tab regression (tabs navigated as full pages). Fixed 2026-08-19 by moving tab script to after EOF jQuery load (`b933904`). Hashchange plugin was genuinely dead code.
 - ~~Template placeholder cards commented out in project.html, blog.html, kaggle.html, visualisation.html.~~ Deleted 2026-08-17.
 
 ## Pending assets
@@ -79,3 +79,4 @@ These files are referenced in code but do not exist yet — **action required fr
 - Commit granularity: one commit per logical change (e.g., `About: update bio for MS + patent + keynote`), never a single mega-commit.
 - Never commit without showing the diff first.
 - If a change touches `main.css` or any structural CSS, flag it and wait for confirmation before applying.
+- **Portfolio tab script dependency:** The inline `<script>` after `main.js` at EOF registers `.click()` handlers for Portfolio tab fragment loading via jQuery `.load()`. Do not move this script to `<head>` or remove/relocate `assets/js/jquery.min.js` without verifying that all 4 Portfolio tabs (Projects, Visualisations, Kaggle, Blogs) still load inline. The jQuery 1.4 CDN removal in Session 2A caused a silent regression because this script originally lived in `<head>` and depended on early jQuery availability.
