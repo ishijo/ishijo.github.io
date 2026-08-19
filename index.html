@@ -47,25 +47,6 @@
 	<meta name="msapplication-config" content="images/banners/browserconfig.xml">
 	<meta name="theme-color" content="#afadad">
 
-	<script type="text/javascript">
-		$(document).ready(function () {
-			// Load projects by default on page load
-			$("#dynamic_portion").load("./project.html");
-
-			$("#portfolio_section #nav a").click(function () {
-				// Remove current class from all nav items
-				$("#portfolio_section #nav .nav-item").removeClass("current");
-				// Add current class to clicked item's parent li
-				$(this).parent().addClass("current");
-
-				$("#dynamic_portion").load($(this).attr("href"));
-
-				return false;
-			});
-		});
-	</script>
-
-
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
 	</style>
@@ -496,6 +477,23 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// Load projects by default on page load
+			$("#dynamic_portion").load("./project.html");
+
+			$("#portfolio_section #nav a").click(function () {
+				// Remove current class from all nav items
+				$("#portfolio_section #nav .nav-item").removeClass("current");
+				// Add current class to clicked item's parent li
+				$(this).parent().addClass("current");
+
+				$("#dynamic_portion").load($(this).attr("href"));
+
+				return false;
+			});
+		});
+	</script>
 
 </body>
 
