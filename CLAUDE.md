@@ -64,12 +64,12 @@ These files are referenced in code but do not exist yet — **action required fr
 - CCRS live demo URL — Streamlit deployment blocked; link currently points to GitHub repo.
 
 ## Implementation decisions
-- **Skills icons:** LangGraph, LlamaIndex, ChromaDB, FAISS have no official distributable icon. Used text-pill SVGs (dark rounded rectangle with tool name in Lato font) matching site palette. PyTorch, Hugging Face, FastAPI, AWS, MLflow use brand-color SVG icons.
-- **EIA project card:** Uses inline styles for status badge ("In active development" pill) and tech stack tags — no new CSS classes added.
+- **Skills icons:** LangGraph, LlamaIndex, ChromaDB now use real PNG icons (added 2026-08-20). FAISS still uses text-pill SVG (no PNG available). PyTorch, Hugging Face, FastAPI, AWS, MLflow use brand-color SVG icons. All icons at `height="120"` except Python/PostgreSQL/Docker/Tableau PNGs at `height="150"`.
+- **EIA project card:** Uses inline styles for tech stack tags — no new CSS classes added. Status badge and "Repo coming soon" text removed 2026-08-20; GitHub link added.
 - **About duplication:** Investigated the 4-copy responsive pattern. No rendering bug exists; CSS correctly shows 1 variant per breakpoint. Removed 2 dead CSS rules (orphaned `.bigger-device-401px{display:block}` outside media queries).
 - **Text-pill SVG sizing:** Redesigned from 200x60 to 200x80 viewBox (font-size 22→24) and set HTML `height="120"` to match brand SVG icons in the carousel.
 - **Highlights section:** Inline flexbox layout (no new CSS classes) with emoji + text + right-aligned muted date. Uses `wrapper style2 container special` for visual contrast from adjacent Skills (style1).
-- **Vanir card:** Links to upstream Google repo (`github.com/google/vanir`), not a personal fork. "Workshop paper in progress" status pill matches EIA badge style.
+- **Vanir card:** Links to upstream Google repo (`github.com/google/vanir`), not a personal fork. Status badge removed 2026-08-20.
 - **Banner tagline:** Dropped credential list in favor of single positioning statement. No longer mentions Kaggle 3X Expert (moved to Highlights).
 - **Experience DS1/DS2 split:** Dell tenure split into two entries with distinct date ranges and team attribution ("Experimentation Team" vs "Data Governance Team"). Title deliberately uses "Graduate Research Scholar" (not "AI Research Scholar" from resume) for consistency with Highlights section.
 
