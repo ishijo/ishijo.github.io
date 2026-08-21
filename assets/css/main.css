@@ -4156,3 +4156,8 @@ input, select, textarea {
 			} */
 
 	}
+
+	#highlights_section {
+    background-color: #496060;
+    background-image: none; /* removes any pattern if style2/3 */
+}
