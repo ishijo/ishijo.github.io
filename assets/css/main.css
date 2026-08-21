@@ -416,7 +416,7 @@ footer, header, hgroup, menu, nav, section {
 		  transform: translate3d(0, 0, 0);
 		}
 		100% {
-		  transform: translate3d(-4540px, 0, 0); /* Adjust a combination of this number and the speed below for the perfect animation */
+		  transform: translate3d(-5500px, 0, 0); /* Adjust a combination of this number and the speed below for the perfect animation */
 		}
 	  }
 
@@ -426,7 +426,7 @@ footer, header, hgroup, menu, nav, section {
 		/* min-width: 300px; */
 		object-fit: cover;
 		margin-left: 200px;
-		animation: slide 15s linear infinite; /*Adjust a combination of this speed and the number above for the perfect animation*/
+		animation: slide 24s linear infinite; /*Adjust a combination of this speed and the number above for the perfect animation*/
 	  }
 
 
